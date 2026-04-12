@@ -413,7 +413,7 @@
   <!-- ============================================================
        HERO SECTION — video background + right-side card image
        ============================================================ -->
-  <section class="hero-section pt-10 pb-10 md: pb-24">
+  <section class="hero-section pt-10 pb-12 md:pb-24">
 
     <!-- Background traffic video -->
     <video id="hero-video"
@@ -538,8 +538,11 @@
        ============================================================ -->
   <section class="py-16 md:py-24 bg-surface-container-low overflow-hidden" id="focus-areas">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <h2 class="text-4xl font-extrabold text-on-surface mb-4">Our Key Areas of Work</h2>
-      <p class="text-on-surface-variant text-lg mb-16 max-w-2xl">Strategic interventions designed to transform the landscape of Indian trauma and emergency medicine.</p>
+      <div class="lg:col-span-4">
+          <h2 class="text-4xl font-extrabold text-primary mb-6">Our Key Areas of Work</h2>
+          <div class="w-20 h-1.5 bg-secondary rounded-full mb-20"></div>
+        </div>
+      <p class="text-on-surface-variant text-lg mb-10 max-w-2xl">Strategic interventions designed to transform the landscape of Indian trauma and emergency medicine.</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
         <div class="focus-card bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between group hover:bg-primary transition-all duration-300 cursor-default">
@@ -622,15 +625,18 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
 
       <!-- Section header — invitation tone -->
-      <div class="text-center mb-4">
-        <h2 class="text-4xl font-extrabold text-on-surface mb-4">Be a Part of the Change</h2>
-        <p class="text-on-surface-variant text-xl max-w-2xl mx-auto leading-relaxed">
+      <div class="mb-4">
+        <div class="lg:col-span-4">
+          <h2 class="text-4xl font-extrabold text-primary mb-6">Be a Part of the Change</h2>
+          <div class="w-20 h-1.5 bg-secondary rounded-full mb-20"></div>
+        </div>
+        <p class="text-on-surface-variant text-lg max-w-2xl mx-auto leading-relaxed">
           We invite institutions and individuals to collaborate and contribute — because lasting change in healthcare happens when we work together.
         </p>
       </div>
 
       <!-- Institution invitation cards -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 mt-14 mb-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 mt-10 mb-6">
 
         <!-- NGOs card -->
         <div class="involve-card">
@@ -701,18 +707,15 @@
             </p>
             <div class="flex flex-wrap gap-3">
               <a id="involve-ind-member" href="#" target="_blank" rel="noopener"
-                 class="inline-flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:opacity-90 transition-all shadow-sm">
-                <span class="material-symbols-outlined" style="font-size:1rem;">card_membership</span>
+                 class="inline-flex items-center gap-2 bg-primary text-white px-5 py-2 rounded-lg font-semibold text-sm hover:opacity-90 transition-all shadow-sm">
                 Take Individual Membership
               </a>
               <a id="involve-ind-volunteer" href="#" target="_blank" rel="noopener"
                  class="inline-flex items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-primary hover:text-white transition-all">
-                <span class="material-symbols-outlined" style="font-size:1rem;">volunteer_activism</span>
                 Become a Volunteer
               </a>
               <a id="involve-ind-expert" href="#" target="_blank" rel="noopener"
                  class="inline-flex items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-primary hover:text-white transition-all">
-                <span class="material-symbols-outlined" style="font-size:1rem;">psychology</span>
                 Contribute as an Expert
               </a>
             </div>
@@ -738,11 +741,14 @@
         </div>
 
         <div>
-          <h2 class="text-4xl font-extrabold text-on-surface mb-8">Share Your Story</h2>
-          <p class="text-xl text-on-surface-variant leading-relaxed mb-6">
+          <div class="lg:col-span-4">
+          <h2 class="text-4xl font-extrabold text-primary mb-6">Share Your Story</h2>
+          <div class="w-20 h-1.5 bg-secondary rounded-full mb-20"></div>
+        </div>
+          <p class="text-lg text-on-surface-variant leading-relaxed mb-6">
             Have you or someone you know faced challenges during a road accident or burn injury?
           </p>
-          <p class="text-xl text-on-surface-variant leading-relaxed mb-10">
+          <p class="text-lg text-on-surface-variant leading-relaxed mb-10">
             Your experience can help improve systems and save lives. We encourage individuals to share their real-life experiences to inform better policies, awareness, and interventions.
           </p>
           <a id="community-cta"
@@ -759,10 +765,10 @@
   <!-- ============================================================
        FOOTER HIGHLIGHT / JOIN US CTA
        ============================================================ -->
-  <section class="bg-surface-container-low py-20 border-t border-outline-variant/10">
+  <section class="bg-surface-container-low py-16 md:py-24 border-t border-outline-variant/10">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
 
-      <h2 class="text-3xl font-extrabold text-primary mb-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-primary mb-4">
         Join Us in Strengthening India's Trauma &amp; Health Systems
       </h2>
       <p class="text-on-surface-variant text-lg mb-10">
@@ -770,16 +776,33 @@
       </p>
 
       <!-- CTA links -->
-      <div class="flex flex-wrap justify-center gap-6 mb-12">
-        <a id="cta-partner"   href="#" target="_blank" rel="noopener"
-           class="text-primary font-bold text-lg hover:underline underline-offset-4">Partner With Us</a>
-        <span class="text-outline-variant hidden md:block self-center">|</span>
-        <a id="cta-member"   href="#" target="_blank" rel="noopener"
-           class="text-primary font-bold text-lg hover:underline underline-offset-4">Become a Member</a>
-        <span class="text-outline-variant hidden md:block self-center">|</span>
-        <a id="cta-volunteer" href="#" target="_blank" rel="noopener"
-           class="text-primary font-bold text-lg hover:underline underline-offset-4">Volunteer With Us</a>
-      </div>
+     <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 mb-12">
+
+  <!-- Button 1 -->
+  <a id="cta-partner" href="#" target="_blank" rel="noopener"
+     class="w-full md:w-auto text-center bg-primary text-white px-6 py-3 rounded-lg font-semibold text-base md:bg-transparent md:text-primary md:p-0 md:hover:underline">
+    Partner With Us
+  </a>
+
+  <!-- Separator (ONLY DESKTOP) -->
+  <span class="hidden md:inline text-outline-variant">|</span>
+
+  <!-- Button 2 -->
+  <a id="cta-member" href="#" target="_blank" rel="noopener"
+     class="w-full md:w-auto text-center bg-primary text-white px-6 py-3 rounded-lg font-semibold text-base md:bg-transparent md:text-primary md:p-0 md:hover:underline">
+    Become a Member
+  </a>
+
+  <!-- Separator -->
+  <span class="hidden md:inline text-outline-variant">|</span>
+
+  <!-- Button 3 -->
+  <a id="cta-volunteer" href="#" target="_blank" rel="noopener"
+     class="w-full md:w-auto text-center bg-primary text-white px-6 py-3 rounded-lg font-semibold text-base md:bg-transparent md:text-primary md:p-0 md:hover:underline">
+    Volunteer With Us
+  </a>
+
+</div>
 
       
 
