@@ -8,38 +8,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 
-<!-- ============================================================
-     SITE CONSTANTS — Edit these to change colours, images, links
-     ============================================================ -->
 <script id="site-constants">
   const SITE = {
-    /* ---------- Brand colours (used in JS-driven inline styles if needed) ---------- */
     colors: {
-      primary:               '#00346f',   /* Deep navy — main brand color */
-      primaryContainer:      '#004a99',   /* Darker navy for gradients */
-      primaryFixed:          '#d7e2ff',   /* Light blue tint for badges */
-      onPrimaryFixed:        '#001b3f',   /* Text on light-blue badge */
-      secondary:             '#b7102a',   /* Red accent */
+      primary:               '#00346f',
+      primaryContainer:      '#004a99',
+      primaryFixed:          '#d7e2ff',
+      onPrimaryFixed:        '#001b3f',
+      secondary:             '#b7102a',
       onSurface:             '#191c1e',
       onSurfaceVariant:      '#424751',
       surface:               '#f7f9fb',
       surfaceContainerLow:   '#f2f4f6',
       surfaceContainerLowest:'#ffffff',
       outlineVariant:        '#c2c6d3',
-      heroOverlay:           'rgba(0,52,111,0.78)', /* Tint on hero video */
-      advisoryBg:            '#001b3f',   /* Dark navy for advisory board card */
+      heroOverlay:           'rgba(0,52,111,0.78)',
+      advisoryBg:            '#001b3f',
       footerBg:              '#f2f4f6',
       footerText:            '#424751',
       footerHeading:         '#00346f',
     },
-
-    /* ---------- Typography ---------- */
-    fonts: {
-      body:    'Inter',
-      heading: 'Inter',
-    },
-
-    /* ---------- WhatsApp links ---------- */
+    fonts: { body: 'Inter', heading: 'Inter' },
     whatsapp: {
       base:        'https://wa.me/918826534552',
       collaborate: "https://wa.me/918826534552?text=Hi,%20I'd%20like%20to%20collaborate%20with%20ITHCS%20Foundation.",
@@ -48,42 +37,28 @@
       expert:      "https://wa.me/918826534552?text=Hi,%20I'd%20like%20to%20contribute%20as%20an%20expert%20with%20ITHCS%20Foundation.",
       story:       "https://wa.me/918826534552?text=Hi,%20I'd%20like%20to%20share%20my%20story%20with%20ITHCS%20Foundation.",
     },
-
-    /* ---------- Images ---------- */
     images: {
-      /* Right-side hero card image (portrait on mobile, landscape on desktop) */
       heroCard:    'https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&q=80',
-
-      /* Advisory board section image */
       advisory:    'https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&q=80',
-
-      /* Get Involved section — one image per card */
+      challenge:   'https://images.unsplash.com/photo-1587745416684-47953f16f02f?w=900&q=80',
+      approach:    'https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=900&q=80',
       getInvolved: {
         ngos:       'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&q=80',
         medical:    'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80',
         public:     'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80',
         individual: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80',
       },
-
-      /* Community voices / Share Your Story */
       community:   'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80',
-
-      /* CTA section image (below the Join Us separator) */
       ctaSection:  'https://images.unsplash.com/photo-1504813184591-01572f98c85f?w=1400&q=80',
     },
-
-    /* ---------- Hero background video ---------- */
     heroVideo: 'https://videos.pexels.com/video-files/3667987/3667987-uhd_2560_1440_25fps.mp4',
   };
 </script>
 
 <style>
-  /* ---------- Material Icons ---------- */
   .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   }
-
-  /* ---------- Mobile Snackbar Nav ---------- */
   #mobile-menu {
     transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.35s ease;
     transform: translateY(100%);
@@ -95,38 +70,18 @@
     opacity: 1;
     pointer-events: all;
   }
-
-  /* ---------- Hero video background ---------- */
-  .hero-section {
-    position: relative;
-    overflow: hidden;
-  }
+  .hero-section { position: relative; overflow: hidden; }
   .hero-video-bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 0;
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; object-position: center; z-index: 0;
   }
   .hero-video-overlay {
-    position: absolute;
-    inset: 0;
+    position: absolute; inset: 0;
     background: linear-gradient(135deg, rgba(0,52,111,0.88) 0%, rgba(0,74,153,0.65) 55%, rgba(0,27,63,0.82) 100%);
     z-index: 1;
   }
-  .hero-content {
-    position: relative;
-    z-index: 2;
-  }
-
-  /* ---------- Hero card image responsive ---------- */
-  .hero-img-wrap {
-    position: relative;
-    overflow: hidden;
-    border-radius: 1rem;
-  }
+  .hero-content { position: relative; z-index: 2; }
+  .hero-img-wrap { position: relative; overflow: hidden; border-radius: 1rem; }
   @media (max-width: 1023px) {
     .hero-img-wrap { aspect-ratio: 3/4; }
     .hero-img-wrap img { height: 100%; width: 100%; object-fit: cover; object-position: center top; }
@@ -135,29 +90,13 @@
     .hero-img-wrap { aspect-ratio: 4/3; }
     .hero-img-wrap img { height: 100%; width: 100%; object-fit: cover; }
   }
-
-  /* ---------- Become a Member button (glass style) ---------- */
   .member-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border: 2px solid rgba(255,255,255,0.4);
-      color: #fff;
-      background: transparent;
-      padding: 1rem 2rem;
-      border-radius: 0.5rem;
-      font-weight: 700;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: all 0.25s ease;
-    }
-
-    .member-btn:hover {
-      background: rgba(255,255,255,0.1);
-      border-color: rgba(255,255,255,0.6);
-    }
-
-  /* ---------- Advisory board image ---------- */
+    display: inline-flex; align-items: center; justify-content: center;
+    border: 2px solid rgba(255,255,255,0.4); color: #fff; background: transparent;
+    padding: 1rem 2rem; border-radius: 0.5rem; font-weight: 700; font-size: 1rem;
+    text-decoration: none; transition: all 0.25s ease;
+  }
+  .member-btn:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.6); }
   @media (max-width: 1023px) {
     .advisory-img-wrap { aspect-ratio: 16/9; }
     .advisory-img-wrap img { height: 100%; width: 100%; object-fit: cover; object-position: center top; }
@@ -166,93 +105,56 @@
     .advisory-img-wrap { min-height: 320px; height: 100%; }
     .advisory-img-wrap img { position: absolute; inset: 0; height: 100%; width: 100%; object-fit: cover; object-position: center top; }
   }
-
-  /* ---------- Community voices image ---------- */
-  .community-img {
-    width: 100%;
-    border-radius: 1rem;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-  }
+  .community-img { width: 100%; border-radius: 1rem; object-fit: cover; object-position: center; display: block; }
   @media (max-width: 1023px) { .community-img { aspect-ratio: 3/4; height: auto; } }
   @media (min-width: 1024px) { .community-img { height: 420px; } }
-
-  /* ---------- Get Involved invitation cards ---------- */
   .involve-card {
-    background: #fff;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
-    display: flex;
-    flex-direction: column;
+    background: #fff; border-radius: 1rem; overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07); display: flex; flex-direction: column;
     transition: box-shadow 0.2s, transform 0.2s;
   }
-  .involve-card:hover {
-    box-shadow: 0 8px 32px rgba(0,52,111,0.13);
-    transform: translateY(-3px);
-  }
-  .involve-card-img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-  }
-  .involve-card-body {
-    padding: 1.5rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
+  .involve-card:hover { box-shadow: 0 8px 32px rgba(0,52,111,0.13); transform: translateY(-3px); }
+  .involve-card-img { width: 100%; height: 180px; object-fit: cover; object-position: center; display: block; }
+  .involve-card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
   .involve-card-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    margin-top: auto;
-    padding-top: 1rem;
-    font-weight: 700;
-    font-size: 0.875rem;
-    color: #00346f;
-    text-decoration: none;
-    transition: gap 0.2s;
+    display: inline-flex; align-items: center; gap: 0.4rem; margin-top: auto;
+    padding-top: 1rem; font-weight: 700; font-size: 0.875rem; color: #00346f;
+    text-decoration: none; transition: gap 0.2s; cursor: pointer;
   }
   .involve-card-cta:hover { gap: 0.7rem; }
-
-  /* ---------- CTA section image ---------- */
-  .cta-section-img {
-    width: 100%;
-    border-radius: 1.5rem;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-  }
+  .cta-section-img { width: 100%; border-radius: 1.5rem; object-fit: cover; object-position: center; display: block; }
   @media (max-width: 1023px) { .cta-section-img { aspect-ratio: 16/9; height: auto; } }
   @media (min-width: 1024px) { .cta-section-img { height: 340px; } }
-
-  /* ---------- Hamburger lines ---------- */
-  #ham-line1, #ham-line2, #ham-line3 {
-    transition: transform 0.25s ease, opacity 0.25s ease;
-  }
-
-  /* ---------- Focus area cards — scroll-triggered animation (mobile only) ---------- */
+  #ham-line1, #ham-line2, #ham-line3 { transition: transform 0.25s ease, opacity 0.25s ease; }
   @media (max-width: 1023px) {
-    .focus-card {
-      transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s ease;
-    }
-    .focus-card.in-view {
-      background-color: #00346f !important;
-      transform: translateY(-3px);
-    }
-    .focus-card.in-view .focus-num {
-      color: rgba(215,226,255,0.5) !important;
-    }
-    .focus-card.in-view .focus-title {
-      color: #ffffff !important;
-    }
-    .focus-card.in-view .focus-desc {
-      color: rgba(255,255,255,0.8) !important;
-    }
+    .focus-card { transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s ease; }
+    .focus-card.in-view { background-color: #00346f !important; transform: translateY(-3px); }
+    .focus-card.in-view .focus-num { color: rgba(215,226,255,0.5) !important; }
+    .focus-card.in-view .focus-title { color: #ffffff !important; }
+    .focus-card.in-view .focus-desc { color: rgba(255,255,255,0.8) !important; }
+  }
+  .challenge-gap-item {
+    display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.875rem 1rem;
+    background: #fff3f4; border-left: 3px solid #b7102a; border-radius: 0 0.5rem 0.5rem 0;
+  }
+  .approach-step-item {
+    display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 1.25rem;
+    background: #ffffff; border-radius: 0.75rem; box-shadow: 0 1px 4px rgba(0,52,111,0.07);
+    border: 1px solid #e8eef5; transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .approach-step-item:hover { box-shadow: 0 6px 20px rgba(0,52,111,0.11); transform: translateY(-2px); }
+  .approach-step-num {
+    flex-shrink: 0; width: 2rem; height: 2rem; background: #00346f; color: #fff;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 0.8rem; font-weight: 700;
+  }
+  .section-side-img { width: 100%; border-radius: 1rem; object-fit: cover; object-position: center; display: block; }
+  @media (max-width: 1023px) { .section-side-img { aspect-ratio: 4/3; height: auto; } }
+  @media (min-width: 1024px) { .section-side-img { height: 460px; } }
+  .heart { display: inline-block; animation: heartbeat 1s infinite; }
+  @keyframes heartbeat {
+    0% { transform: scale(1); } 25% { transform: scale(1.2); }
+    40% { transform: scale(1); } 60% { transform: scale(1.2); } 100% { transform: scale(1); }
   }
 </style>
 
@@ -262,65 +164,33 @@
     theme: {
       extend: {
         colors: {
-          "inverse-on-surface":         "#eff1f3",
-          "inverse-surface":            "#2d3133",
-          "surface-container-highest":  "#e0e3e5",
-          "tertiary-container":         "#833301",
-          "tertiary-fixed":             "#ffdbcc",
-          "inverse-primary":            "#abc7ff",
-          "on-tertiary-fixed":          "#351000",
-          "on-secondary":               "#ffffff",
-          "on-primary-container":       "#9bbdff",
-          "primary":                    "#00346f",
-          "surface-container":          "#eceef0",
-          "surface-variant":            "#e0e3e5",
-          "on-error":                   "#ffffff",
-          "on-tertiary-container":      "#ffa77e",
-          "surface-container-high":     "#e6e8ea",
-          "primary-container":          "#004a99",
-          "tertiary":                   "#5f2200",
-          "on-primary":                 "#ffffff",
-          "on-tertiary-fixed-variant":  "#7b2f00",
-          "on-surface-variant":         "#424751",
-          "secondary":                  "#b7102a",
-          "background":                 "#f7f9fb",
-          "surface-container-lowest":   "#ffffff",
-          "surface":                    "#f7f9fb",
-          "surface-bright":             "#f7f9fb",
-          "on-error-container":         "#93000a",
-          "on-surface":                 "#191c1e",
-          "tertiary-fixed-dim":         "#ffb694",
-          "surface-dim":                "#d8dadc",
-          "on-tertiary":                "#ffffff",
-          "primary-fixed":              "#d7e2ff",
-          "secondary-fixed-dim":        "#ffb3b1",
-          "primary-fixed-dim":          "#abc7ff",
-          "on-secondary-fixed":         "#410007",
-          "secondary-fixed":            "#ffdad8",
-          "on-primary-fixed-variant":   "#00458f",
-          "on-secondary-container":     "#fffbff",
-          "surface-tint":               "#255dad",
-          "outline":                    "#737783",
-          "on-primary-fixed":           "#001b3f",
-          "outline-variant":            "#c2c6d3",
-          "on-background":              "#191c1e",
-          "secondary-container":        "#db313f",
-          "surface-container-low":      "#f2f4f6",
-          "on-secondary-fixed-variant": "#92001c",
-          "error":                      "#ba1a1a",
-          "error-container":            "#ffdad6",
+          "inverse-on-surface": "#eff1f3", "inverse-surface": "#2d3133",
+          "surface-container-highest": "#e0e3e5", "tertiary-container": "#833301",
+          "tertiary-fixed": "#ffdbcc", "inverse-primary": "#abc7ff",
+          "on-tertiary-fixed": "#351000", "on-secondary": "#ffffff",
+          "on-primary-container": "#9bbdff", "primary": "#00346f",
+          "surface-container": "#eceef0", "surface-variant": "#e0e3e5",
+          "on-error": "#ffffff", "on-tertiary-container": "#ffa77e",
+          "surface-container-high": "#e6e8ea", "primary-container": "#004a99",
+          "tertiary": "#5f2200", "on-primary": "#ffffff",
+          "on-tertiary-fixed-variant": "#7b2f00", "on-surface-variant": "#424751",
+          "secondary": "#b7102a", "background": "#f7f9fb",
+          "surface-container-lowest": "#ffffff", "surface": "#f7f9fb",
+          "surface-bright": "#f7f9fb", "on-error-container": "#93000a",
+          "on-surface": "#191c1e", "tertiary-fixed-dim": "#ffb694",
+          "surface-dim": "#d8dadc", "on-tertiary": "#ffffff",
+          "primary-fixed": "#d7e2ff", "secondary-fixed-dim": "#ffb3b1",
+          "primary-fixed-dim": "#abc7ff", "on-secondary-fixed": "#410007",
+          "secondary-fixed": "#ffdad8", "on-primary-fixed-variant": "#00458f",
+          "on-secondary-container": "#fffbff", "surface-tint": "#255dad",
+          "outline": "#737783", "on-primary-fixed": "#001b3f",
+          "outline-variant": "#c2c6d3", "on-background": "#191c1e",
+          "secondary-container": "#db313f", "surface-container-low": "#f2f4f6",
+          "on-secondary-fixed-variant": "#92001c", "error": "#ba1a1a",
+          "error-container": "#ffdad6",
         },
-        borderRadius: {
-          DEFAULT: "0.25rem",
-          lg:      "0.5rem",
-          xl:      "0.75rem",
-          full:    "9999px",
-        },
-        fontFamily: {
-          headline: ["Inter"],
-          body:     ["Inter"],
-          label:    ["Inter"],
-        },
+        borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+        fontFamily: { headline: ["Inter"], body: ["Inter"], label: ["Inter"] },
       },
     },
   }
@@ -328,33 +198,27 @@
 </head>
 <body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
 
-<!-- ============================================================
-     HEADER / TOP NAV
-     ============================================================ -->
+<!-- HEADER -->
 <header class="sticky top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm">
-  <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
-
-    <!-- Logo -->
-    <div class="text-2xl font-bold tracking-tighter text-[#00346f]">ITHCS Foundation</div>
-
-    <!-- Desktop nav links -->
-    <div class="hidden md:flex gap-8 items-center">
+  <nav class="flex justify-between items-center px-4 md:px-6 py-4 max-w-7xl mx-auto">
+<!-- Logo -->
+<a href="#top">
+  <img src="/ITHCS_logo.png" 
+       alt="ITHCS Foundation Logo"
+       class="h-16 md:h-20 w-auto object-contain cursor-pointer">
+</a>    
+     <div class="hidden md:flex gap-8 items-center">
       <a class="text-sm font-medium text-[#424751] hover:text-[#00346f] transition-colors duration-300" href="#about">About Us</a>
       <a class="text-sm font-medium text-[#424751] hover:text-[#00346f] transition-colors duration-300" href="#focus-areas">Focus Areas</a>
       <a class="text-sm font-medium text-[#424751] hover:text-[#00346f] transition-colors duration-300" href="#advisory-board">Advisory Board</a>
       <a class="text-sm font-medium text-[#424751] hover:text-[#00346f] transition-colors duration-300" href="#get-involved">Get Involved</a>
       <a class="text-sm font-medium text-[#424751] hover:text-[#00346f] transition-colors duration-300" href="#contact">Contact</a>
     </div>
-
-    <!-- Desktop CTA -->
-    <a id="hdr-collaborate"
-       href="#"
-       target="_blank" rel="noopener"
-       class="hidden md:inline-block bg-gradient-to-br from-primary to-primary-container text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:opacity-90 transition-all shadow-md">
-      Collaborate With Us
+    <a href="#"
+       class="hidden md:inline-flex items-center gap-2 bg-gradient-to-br from-primary to-primary-container text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:opacity-90 transition-all shadow-md">
+      <span class="heart text-[16px]">❤️</span>
+      Donate Us
     </a>
-
-    <!-- Mobile hamburger -->
     <button id="hamburger-btn"
             class="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-surface-container-low transition-colors"
             aria-label="Open menu">
@@ -365,70 +229,43 @@
   </nav>
 </header>
 
-<!-- ============================================================
-     MOBILE SNACKBAR MENU (bottom sheet)
-     ============================================================ -->
+<!-- MOBILE SNACKBAR MENU -->
 <div id="mobile-menu" class="fixed bottom-0 left-0 right-0 z-50 md:hidden">
   <div class="bg-white rounded-t-3xl shadow-2xl border border-outline-variant/20 px-2 pt-4 pb-4">
-    <!-- Drag handle -->
     <div class="w-12 h-1 bg-outline-variant/40 rounded-full mx-auto mb-4"></div>
-    <!-- Nav links -->
     <nav class="flex flex-col gap-1 mb-4">
-      <a href="#about"
-         class="mobile-nav-link flex items-center gap-3 px-4 py-2 rounded-xl text-[#424751] font-medium text-base hover:bg-surface-container-low hover:text-[#00346f] transition-all">
+      <a href="#about" class="mobile-nav-link flex items-center gap-3 px-4 py-2 rounded-xl text-[#424751] font-medium text-base hover:bg-surface-container-low hover:text-[#00346f] transition-all">
         <span class="material-symbols-outlined text-[#00346f] text-xl">info</span>About Us
       </a>
-      <a href="#focus-areas"
-         class="mobile-nav-link flex items-center gap-3 px-4 py-2 rounded-xl text-[#424751] font-medium text-base hover:bg-surface-container-low hover:text-[#00346f] transition-all">
+      <a href="#focus-areas" class="mobile-nav-link flex items-center gap-3 px-4 py-2 rounded-xl text-[#424751] font-medium text-base hover:bg-surface-container-low hover:text-[#00346f] transition-all">
         <span class="material-symbols-outlined text-[#00346f] text-xl">adjust</span>Focus Areas
       </a>
-      <a href="#advisory-board"
-         class="mobile-nav-link flex items-center gap-3 px-4 py-2 rounded-xl text-[#424751] font-medium text-base hover:bg-surface-container-low hover:text-[#00346f] transition-all">
+      <a href="#advisory-board" class="mobile-nav-link flex items-center gap-3 px-4 py-2 rounded-xl text-[#424751] font-medium text-base hover:bg-surface-container-low hover:text-[#00346f] transition-all">
         <span class="material-symbols-outlined text-[#00346f] text-xl">groups</span>Advisory Board
       </a>
-      <a href="#get-involved"
-         class="mobile-nav-link flex items-center gap-3 px-4 py-2 rounded-xl text-[#424751] font-medium text-base hover:bg-surface-container-low hover:text-[#00346f] transition-all">
+      <a href="#get-involved" class="mobile-nav-link flex items-center gap-3 px-4 py-2 rounded-xl text-[#424751] font-medium text-base hover:bg-surface-container-low hover:text-[#00346f] transition-all">
         <span class="material-symbols-outlined text-[#00346f] text-xl">volunteer_activism</span>Get Involved
       </a>
-      <a href="#contact"
-         class="mobile-nav-link flex items-center gap-3 px-4 py-2 rounded-xl text-[#424751] font-medium text-base hover:bg-surface-container-low hover:text-[#00346f] transition-all">
+      <a href="#contact" class="mobile-nav-link flex items-center gap-3 px-4 py-2 rounded-xl text-[#424751] font-medium text-base hover:bg-surface-container-low hover:text-[#00346f] transition-all">
         <span class="material-symbols-outlined text-[#00346f] text-xl">mail</span>Contact
       </a>
     </nav>
-    <!-- CTA button inside snackbar -->
-    <a id="mob-collaborate"
-   href="#"
-   target="_blank" rel="noopener"
-   class="block w-[calc(100%-1.5rem)] mx-auto text-center bg-gradient-to-br from-primary to-primary-container text-white py-3.5 rounded-xl font-bold text-base hover:opacity-90 transition-all shadow-md">
-  Collaborate With Us
+    <a id="mob-donate" href="#"
+   class="flex items-center justify-center gap-2 w-[calc(100%-1.5rem)] mx-auto text-center bg-gradient-to-br from-primary to-primary-container text-white py-3.5 rounded-xl font-bold text-base hover:opacity-90 transition-all shadow-md">
+  <span class="heart text-[16px]">❤️</span>
+  Donate Us
 </a>
   </div>
 </div>
-
-<!-- Backdrop -->
 <div id="menu-backdrop" class="fixed inset-0 bg-black/40 z-40 md:hidden hidden"></div>
 
 <main>
 
-  <!-- ============================================================
-       HERO SECTION — video background + right-side card image
-       ============================================================ -->
+  <!-- HERO SECTION -->
   <section class="hero-section pt-10 pb-12 md:pb-24">
-
-    <!-- Background traffic video -->
-    <video id="hero-video"
-           class="hero-video-bg"
-           autoplay muted loop playsinline
-           preload="auto">
-    </video>
-
-    <!-- Dark gradient overlay so text stays readable -->
+    <video id="hero-video" class="hero-video-bg" autoplay muted loop playsinline preload="auto"></video>
     <div class="hero-video-overlay"></div>
-
-    <!-- Content grid -->
     <div class="hero-content max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-      <!-- Left: text + CTAs -->
       <div>
         <span class="inline-block px-4 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-bold tracking-widest uppercase mb-6">
           Integrated Care. Real Impact
@@ -443,43 +280,35 @@
           Building an integrated, responsive, and patient-centric healthcare ecosystem — from emergency response to recovery.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 w-full max-w-xl">
-          <a id="hero-collaborate"
-   href="#" target="_blank" rel="noopener"
-   class="flex-1 text-center bg-gradient-to-br from-primary to-primary-container text-white px-6 py-4 rounded-lg font-semibold hover:shadow-lg transition-all whitespace-nowrap">
-  Collaborate With Us
-</a>
+  
+  <!-- Collaborate -->
+  <a id="hero-collaborate" href="#"
+     class="flex-1 flex items-center justify-center bg-gradient-to-br from-primary to-primary-container text-white px-6 py-4 rounded-lg font-semibold hover:shadow-lg transition-all whitespace-nowrap">
+    Collaborate With Us
+  </a>
 
-<a id="hero-volunteer"
-   href="#" target="_blank" rel="noopener"
-   class="flex-1 text-center border-2 border-white/40 text-white px-6 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all whitespace-nowrap">
-  Join as Volunteer
-</a>
+  <!-- Donate -->
+  <a id="hero-donate" href="#"
+     class="flex-1 flex items-center justify-center gap-2 border-2 border-white/40 text-white px-6 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all whitespace-nowrap">
+    
+    <span class="heart text-[16px] leading-none">❤️</span>
+    
+    Donate Us
+  </a>
 
-<a id="hero-member"
-   href="#" target="_blank" rel="noopener"
-   class="flex-1 text-center border-2 border-white/40 text-white px-6 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all whitespace-nowrap">
-  Become a Member
-</a>
-        </div>
+</div>
       </div>
-
-      <!-- Right: card image (portrait mobile / landscape desktop) -->
       <div class="relative lg:-mt-24 xl:-mt-24">
         <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary-fixed/20 rounded-full blur-3xl pointer-events-none"></div>
         <div class="hero-img-wrap shadow-2xl">
-          <img id="hero-card-img"
-               src=""
-               alt="Medical professional in a modern clinical setting"
-               class="w-full h-full object-cover"/>
+          <img id="hero-card-img" src="" alt="Medical professional in a modern clinical setting" class="w-full h-full object-cover"/>
           <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent pointer-events-none"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       ABOUT SECTION
-       ============================================================ -->
+  <!-- ABOUT SECTION -->
   <section class="py-16 md:py-24 bg-surface-container-low" id="about">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -496,27 +325,22 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       VISION & MISSION
-       ============================================================ -->
+  <!-- VISION & MISSION -->
   <section class="py-16 md:py-24 bg-surface">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-
-      <!-- Vision -->
       <div class="p-10 lg:p-12 rounded-3xl bg-surface-container-lowest shadow-sm border border-outline-variant/10">
         <div class="flex items-center gap-4 mb-8">
           <span class="material-symbols-outlined text-4xl text-primary">visibility</span>
           <h3 class="text-3xl font-bold text-on-surface">Vision</h3>
         </div>
         <ul class="space-y-4 text-lg text-on-surface-variant">
-          <li class="flex gap-3">
-            <span class="text-primary font-bold">•</span>
-            <span>To build accessible, efficient, and integrated trauma and healthcare systems that save lives and improve outcomes.</span>
-          </li>
+          <li class="flex gap-3"><span class="text-primary font-bold mt-1">•</span><span>Reduce preventable trauma deaths.</span></li>
+          <li class="flex gap-3"><span class="text-primary font-bold mt-1">•</span><span>Improve time-to-treatment within the golden hour.</span></li>
+          <li class="flex gap-3"><span class="text-primary font-bold mt-1">•</span><span>Strengthen district-level emergency care systems.</span></li>
+          <li class="flex gap-3"><span class="text-primary font-bold mt-1">•</span><span>Ensure timely access to safe blood in emergencies.</span></li>
+          <li class="flex gap-3"><span class="text-primary font-bold mt-1">•</span><span>Build replicable models for national scale-up.</span></li>
         </ul>
       </div>
-
-      <!-- Mission -->
       <div class="p-10 lg:p-12 rounded-3xl bg-primary text-white shadow-xl">
         <div class="flex items-center gap-4 mb-8">
           <span class="material-symbols-outlined text-4xl text-primary-fixed">rocket_launch</span>
@@ -533,69 +357,97 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       FOCUS AREAS
-       ============================================================ -->
-  <section class="py-16 md:py-24 bg-surface-container-low overflow-hidden" id="focus-areas">
+  <!-- THE CHALLENGE -->
+  <section class="py-16 md:py-24 bg-surface-container-low" id="the-challenge">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="lg:col-span-4">
-          <h2 class="text-4xl font-extrabold text-primary mb-6">Our Key Areas of Work</h2>
-          <div class="w-20 h-1.5 bg-secondary rounded-full mb-20"></div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="order-2 lg:order-1">
+          <img id="challenge-img" src="" alt="Road traffic accident emergency response in India" class="section-side-img shadow-xl"/>
         </div>
-      <p class="text-on-surface-variant text-lg mb-10 max-w-2xl">Strategic interventions designed to transform the landscape of Indian trauma and emergency medicine.</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-        <div class="focus-card bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between group hover:bg-primary transition-all duration-300 cursor-default">
-          <div>
-            <span class="focus-num text-4xl font-bold text-outline-variant group-hover:text-primary-fixed/50 transition-colors">01</span>
-            <h4 class="focus-title text-xl font-bold mt-4 mb-4 group-hover:text-white transition-colors">Trauma &amp; Emergency Care Systems</h4>
-            <p class="focus-desc text-on-surface-variant group-hover:text-white/80 transition-colors">Developing standardized protocols for pre-hospital care and optimizing emergency department workflows.</p>
+        <div class="order-1 lg:order-2">
+          <h2 class="text-4xl font-extrabold text-on-surface mb-4">The Challenge</h2>
+          <div class="w-20 h-1.5 bg-secondary rounded-full mb-8"></div>
+          <p class="text-lg text-on-surface-variant leading-relaxed mb-6">
+            India reports over <span class="font-bold text-on-surface">1.5 lakh deaths annually</span> due to road traffic injuries, with a significant proportion of these deaths being preventable.
+          </p>
+          <p class="text-base text-on-surface-variant leading-relaxed mb-6">Despite improvements in ambulance services, a critical gap persists:</p>
+          <div class="space-y-3 mb-8">
+            <div class="challenge-gap-item"><span class="material-symbols-outlined text-secondary text-xl flex-shrink-0 mt-0.5">warning</span><span class="text-sm text-on-surface leading-relaxed">Patients are transported, but life-saving care is delayed or unavailable.</span></div>
+            <div class="challenge-gap-item"><span class="material-symbols-outlined text-secondary text-xl flex-shrink-0 mt-0.5">warning</span><span class="text-sm text-on-surface leading-relaxed">District hospitals lack structured trauma stabilization systems.</span></div>
+            <div class="challenge-gap-item"><span class="material-symbols-outlined text-secondary text-xl flex-shrink-0 mt-0.5">warning</span><span class="text-sm text-on-surface leading-relaxed">Blood availability and coordination gaps delay critical interventions.</span></div>
+            <div class="challenge-gap-item"><span class="material-symbols-outlined text-secondary text-xl flex-shrink-0 mt-0.5">warning</span><span class="text-sm text-on-surface leading-relaxed">No integration between first response, ambulance, and hospital care.</span></div>
           </div>
-        </div>
-
-        <div class="focus-card bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between group hover:bg-primary transition-all duration-300 cursor-default">
-          <div>
-            <span class="focus-num text-4xl font-bold text-outline-variant group-hover:text-primary-fixed/50 transition-colors">02</span>
-            <h4 class="focus-title text-xl font-bold mt-4 mb-4 group-hover:text-white transition-colors">Blood Safety &amp; Transfusion System Strengthening</h4>
-            <p class="focus-desc text-on-surface-variant group-hover:text-white/80 transition-colors">Improving blood safety standards and strengthening transfusion systems across health facilities.</p>
-          </div>
-        </div>
-
-        <div class="focus-card bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between group hover:bg-primary transition-all duration-300 cursor-default">
-          <div>
-            <span class="focus-num text-4xl font-bold text-outline-variant group-hover:text-primary-fixed/50 transition-colors">03</span>
-            <h4 class="focus-title text-xl font-bold mt-4 mb-4 group-hover:text-white transition-colors">Health Systems Strengthening</h4>
-            <p class="focus-desc text-on-surface-variant group-hover:text-white/80 transition-colors">Aligning primary, secondary, and tertiary care to ensure seamless patient transitions and system resilience.</p>
-          </div>
-        </div>
-
-        <div class="focus-card bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between group hover:bg-primary transition-all duration-300 cursor-default">
-          <div>
-            <span class="focus-num text-4xl font-bold text-outline-variant group-hover:text-primary-fixed/50 transition-colors">04</span>
-            <h4 class="focus-title text-xl font-bold mt-4 mb-4 group-hover:text-white transition-colors">Capacity Building &amp; Training</h4>
-            <p class="focus-desc text-on-surface-variant group-hover:text-white/80 transition-colors">Organizing workshops for paramedics, nurses, and doctors to enhance trauma response skills.</p>
-          </div>
-        </div>
-
-        <div class="focus-card bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between group hover:bg-primary transition-all duration-300 cursor-default md:col-span-2">
-          <div>
-            <span class="focus-num text-4xl font-bold text-outline-variant group-hover:text-primary-fixed/50 transition-colors">05</span>
-            <h4 class="focus-title text-xl font-bold mt-4 mb-4 group-hover:text-white transition-colors">Research, Policy &amp; Advocacy</h4>
-            <p class="focus-desc text-on-surface-variant group-hover:text-white/80 transition-colors">Engaging with policymakers to create data-driven health policies and trauma care frameworks through evidence-based research.</p>
+          <div class="p-6 rounded-2xl bg-[#001b3f] text-white">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-3xl text-[#d7e2ff] flex-shrink-0 mt-0.5">timer</span>
+              <div>
+                <p class="font-bold text-lg mb-1">The "golden hour" is lost</p>
+                <p class="text-blue-100/80 text-sm leading-relaxed">Not due to lack of resources, but due to <span class="text-white font-semibold">lack of system integration.</span></p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       ADVISORY BOARD — dark card with image on the right
-       ============================================================ -->
+  <!-- OUR APPROACH -->
+  <section class="py-16 md:py-24 bg-surface" id="our-approach">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <h2 class="text-4xl font-extrabold text-on-surface mb-4">Our Approach</h2>
+          <div class="w-20 h-1.5 bg-secondary rounded-full mb-8"></div>
+          <p class="text-lg text-on-surface-variant leading-relaxed mb-3">ITHCS addresses this gap by focusing on <span class="font-semibold text-on-surface">systems, not isolated interventions.</span></p>
+          <p class="text-base text-on-surface-variant leading-relaxed mb-8">We work across the continuum of care:</p>
+          <div class="space-y-4">
+            <div class="approach-step-item"><div class="approach-step-num">1</div><div><p class="font-bold text-on-surface text-sm mb-1">Prevention &amp; First Response</p><p class="text-on-surface-variant text-sm leading-relaxed">Training community responders and strengthening on-ground response systems.</p></div></div>
+            <div class="approach-step-item"><div class="approach-step-num">2</div><div><p class="font-bold text-on-surface text-sm mb-1">Emergency Transport Integration</p><p class="text-on-surface-variant text-sm leading-relaxed">Linking ambulance networks with trained facilities.</p></div></div>
+            <div class="approach-step-item"><div class="approach-step-num">3</div><div><p class="font-bold text-on-surface text-sm mb-1">Hospital Stabilization Systems</p><p class="text-on-surface-variant text-sm leading-relaxed">Establishing trauma-ready units in district hospitals.</p></div></div>
+            <div class="approach-step-item"><div class="approach-step-num">4</div><div><p class="font-bold text-on-surface text-sm mb-1">Blood Safety &amp; Access</p><p class="text-on-surface-variant text-sm leading-relaxed">Strengthening availability, coordination, and rational use of blood in emergencies.</p></div></div>
+            <div class="approach-step-item"><div class="approach-step-num">5</div><div><p class="font-bold text-on-surface text-sm mb-1">Technology &amp; Data Systems</p><p class="text-on-surface-variant text-sm leading-relaxed">Enabling real-time coordination, monitoring, and decision-making.</p></div></div>
+          </div>
+        </div>
+        <div>
+          <img id="approach-img" src="" alt="Healthcare team working on integrated trauma care systems" class="section-side-img shadow-xl"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOCUS AREAS -->
+  <section class="py-16 md:py-24 bg-surface-container-low overflow-hidden" id="focus-areas">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="lg:col-span-4">
+        <h2 class="text-4xl font-extrabold text-primary mb-6">Our Key Areas of Work</h2>
+        <div class="w-20 h-1.5 bg-secondary rounded-full mb-20"></div>
+      </div>
+      <p class="text-on-surface-variant text-lg mb-10 max-w-2xl">Strategic interventions designed to transform the landscape of Indian trauma and emergency medicine.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="focus-card bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between group hover:bg-primary transition-all duration-300 cursor-default">
+          <div><span class="focus-num text-4xl font-bold text-outline-variant group-hover:text-primary-fixed/50 transition-colors">01</span><h4 class="focus-title text-xl font-bold mt-4 mb-4 group-hover:text-white transition-colors">Corridor-Based Trauma Response Systems</h4><p class="focus-desc text-on-surface-variant group-hover:text-white/80 transition-colors">Developing integrated trauma response models along high-risk highways and districts.</p></div>
+        </div>
+        <div class="focus-card bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between group hover:bg-primary transition-all duration-300 cursor-default">
+          <div><span class="focus-num text-4xl font-bold text-outline-variant group-hover:text-primary-fixed/50 transition-colors">02</span><h4 class="focus-title text-xl font-bold mt-4 mb-4 group-hover:text-white transition-colors">Trauma Stabilization Units (TSU)</h4><p class="focus-desc text-on-surface-variant group-hover:text-white/80 transition-colors">Strengthening district hospitals to provide structured, life-saving stabilization within the first critical minutes.</p></div>
+        </div>
+        <div class="focus-card bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between group hover:bg-primary transition-all duration-300 cursor-default">
+          <div><span class="focus-num text-4xl font-bold text-outline-variant group-hover:text-primary-fixed/50 transition-colors">03</span><h4 class="focus-title text-xl font-bold mt-4 mb-4 group-hover:text-white transition-colors">Capacity Building &amp; Training</h4><p class="focus-desc text-on-surface-variant group-hover:text-white/80 transition-colors">Training first responders, ambulance personnel, and doctors and nurses through simulation-based, protocol-driven programs.</p></div>
+        </div>
+        <div class="focus-card bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between group hover:bg-primary transition-all duration-300 cursor-default">
+          <div><span class="focus-num text-4xl font-bold text-outline-variant group-hover:text-primary-fixed/50 transition-colors">04</span><h4 class="focus-title text-xl font-bold mt-4 mb-4 group-hover:text-white transition-colors">Blood Safety &amp; Emergency Access Systems</h4><p class="focus-desc text-on-surface-variant group-hover:text-white/80 transition-colors">Improving blood availability and linkage, emergency transfusion readiness, and coordination between blood banks and hospitals.</p></div>
+        </div>
+        <div class="focus-card bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between group hover:bg-primary transition-all duration-300 cursor-default md:col-span-2">
+          <div><span class="focus-num text-4xl font-bold text-outline-variant group-hover:text-primary-fixed/50 transition-colors">05</span><h4 class="focus-title text-xl font-bold mt-4 mb-4 group-hover:text-white transition-colors">Digital &amp; Data Platforms</h4><p class="focus-desc text-on-surface-variant group-hover:text-white/80 transition-colors">Developing technology solutions for real-time emergency response coordination, case tracking and system performance, and data-driven planning and policy support.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVISORY BOARD -->
   <section class="py-16 md:py-24 bg-surface" id="advisory-board">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="relative rounded-[1rem] md:rounded-[1.5rem] bg-[#001b3f] text-white overflow-hidden">
         <div class="grid grid-cols-1 lg:grid-cols-2">
-          <!-- Left: text -->
           <div class="relative z-10 p-10 md:p-16 flex flex-col justify-center">
             <h2 class="text-4xl font-extrabold mb-8">Our Advisory Board</h2>
             <div class="space-y-6 text-xl leading-relaxed text-blue-50/80">
@@ -603,14 +455,8 @@
               <p>The board provides strategic guidance across all focus areas, including trauma care systems and blood safety improvement, ensuring a comprehensive and impactful approach.</p>
             </div>
           </div>
-
-          <!-- Right: image -->
           <div class="relative advisory-img-wrap overflow-hidden lg:rounded-r-[1.5rem]">
-            <img id="advisory-img"
-                 src=""
-                 alt="Advisory board members in a strategic meeting"
-                 class="w-full h-full object-cover object-center"/>
-            <!-- Gradient blend on left edge (desktop) -->
+            <img id="advisory-img" src="" alt="Advisory board members in a strategic meeting" class="w-full h-full object-cover object-center"/>
             <div class="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#001b3f] to-transparent hidden lg:block"></div>
           </div>
         </div>
@@ -618,27 +464,19 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       GET INVOLVED — invitation-style with images per card
-       ============================================================ -->
+  <!-- GET INVOLVED -->
   <section class="py-16 md:py-24 bg-surface-container-low" id="get-involved">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
-      <!-- Section header — invitation tone -->
       <div class="mb-4">
         <div class="lg:col-span-4">
           <h2 class="text-4xl font-extrabold text-primary mb-6">Be a Part of the Change</h2>
           <div class="w-20 h-1.5 bg-secondary rounded-full mb-20"></div>
         </div>
         <p class="text-on-surface-variant text-lg max-w-2xl leading-relaxed">
-  We invite institutions and individuals to collaborate and contribute — because lasting change in healthcare happens when we work together.
-</p>
+          We invite institutions and individuals to collaborate and contribute — because lasting change in healthcare happens when we work together.
+        </p>
       </div>
-
-      <!-- Institution invitation cards -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 mt-10 mb-6">
-
-        <!-- NGOs card -->
         <div class="involve-card">
           <img id="involve-ngos" src="" alt="NGOs and civil society collaboration" class="involve-card-img"/>
           <div class="involve-card-body">
@@ -646,16 +484,12 @@
               <span class="material-symbols-outlined text-secondary text-2xl">handshake</span>
               <h4 class="font-bold text-lg text-on-surface">NGOs &amp; Civil Society Organisations</h4>
             </div>
-            <p class="text-sm text-on-surface-variant leading-relaxed">
-              Partner with us for implementation and outreach — extend the reach of trauma care to communities that need it most.
-            </p>
-            <a id="involve-ngos-cta" href="#" target="_blank" rel="noopener" class="involve-card-cta">
+            <p class="text-sm text-on-surface-variant leading-relaxed">Partner with us for implementation and outreach — extend the reach of trauma care to communities that need it most.</p>
+            <a id="involve-ngos-cta" href="#" class="involve-card-cta">
               Partner With Us <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
             </a>
           </div>
         </div>
-
-        <!-- Medical Colleges card -->
         <div class="involve-card">
           <img id="involve-medical" src="" alt="Medical college and hospital collaboration" class="involve-card-img"/>
           <div class="involve-card-body">
@@ -663,16 +497,12 @@
               <span class="material-symbols-outlined text-secondary text-2xl">school</span>
               <h4 class="font-bold text-lg text-on-surface">Medical Colleges &amp; Hospitals</h4>
             </div>
-            <p class="text-sm text-on-surface-variant leading-relaxed">
-              Collaborate on training, research, and system strengthening — bring clinical excellence into the framework.
-            </p>
-            <a id="involve-medical-cta" href="#" target="_blank" rel="noopener" class="involve-card-cta">
+            <p class="text-sm text-on-surface-variant leading-relaxed">Collaborate on training, research, and system strengthening — bring clinical excellence into the framework.</p>
+            <a id="involve-medical-cta" href="#" class="involve-card-cta">
               Collaborate With Us <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
             </a>
           </div>
         </div>
-
-        <!-- Public Health card -->
         <div class="involve-card">
           <img id="involve-public" src="" alt="Public health experts contributing" class="involve-card-img"/>
           <div class="involve-card-body">
@@ -680,79 +510,57 @@
               <span class="material-symbols-outlined text-secondary text-2xl">account_balance</span>
               <h4 class="font-bold text-lg text-on-surface">Public Health Institutions &amp; Experts</h4>
             </div>
-            <p class="text-sm text-on-surface-variant leading-relaxed">
-              Contribute knowledge, policy insights, and technical expertise to shape evidence-driven healthcare systems.
-            </p>
-            <a id="involve-public-cta" href="#" target="_blank" rel="noopener" class="involve-card-cta">
+            <p class="text-sm text-on-surface-variant leading-relaxed">Contribute knowledge, policy insights, and technical expertise to shape evidence-driven healthcare systems.</p>
+            <a id="involve-public-cta" href="#" class="involve-card-cta">
               Share Expertise <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
             </a>
           </div>
         </div>
       </div>
-
-      <!-- Individual Engagement — horizontal card with image -->
       <div class="involve-card overflow-hidden">
         <div class="flex flex-col md:flex-row items-stretch h-full">
-          <img id="involve-individual"
-     src=""
-     alt="Individual volunteering and contributing"
-     class="w-full md:w-80 object-cover object-center md:h-auto"/>
+          <img id="involve-individual" src="" alt="Individual volunteering and contributing" class="w-full md:w-80 object-cover object-center md:h-auto"/>
           <div class="involve-card-body md:p-10 flex flex-col justify-between">
             <div class="flex items-top gap-3 mb-3">
               <span class="material-symbols-outlined text-secondary text-2xl">person_add</span>
               <h4 class="font-bold text-xl text-on-surface">Individual Engagement</h4>
             </div>
-            <p class="text-base text-on-surface-variant leading-relaxed mb-5">
-              Your skills and commitment can drive real change. Whether you are a healthcare professional, a policy enthusiast, or a concerned citizen — there is a place for you here.
-            </p>
+            <p class="text-base text-on-surface-variant leading-relaxed mb-5">Your skills and commitment can drive real change. Whether you are a healthcare professional, a policy enthusiast, or a concerned citizen — there is a place for you here.</p>
             <div class="flex flex-wrap gap-3">
-              <a id="involve-ind-member" href="#" target="_blank" rel="noopener"
-                 class="inline-flex items-center gap-2 bg-primary text-white px-5 py-2 rounded-lg font-semibold text-sm hover:opacity-90 transition-all shadow-sm">
+              <a id="involve-ind-member" href="#"
+                 class="inline-flex items-center gap-2 bg-primary text-white px-5 py-2 rounded-lg font-semibold text-sm hover:opacity-90 transition-all shadow-sm cursor-pointer">
                 Take Individual Membership
               </a>
-              <a id="involve-ind-volunteer" href="#" target="_blank" rel="noopener"
-                 class="inline-flex items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-primary hover:text-white transition-all">
+              <a id="involve-ind-volunteer" href="#"
+                 class="inline-flex items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-primary hover:text-white transition-all cursor-pointer">
                 Become a Volunteer
               </a>
-              <a id="involve-ind-expert" href="#" target="_blank" rel="noopener"
-                 class="inline-flex items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-primary hover:text-white transition-all">
+              <a id="involve-ind-expert" href="#"
+                 class="inline-flex items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-primary hover:text-white transition-all cursor-pointer">
                 Contribute as an Expert
               </a>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ============================================================
-       COMMUNITY VOICES / SHARE YOUR STORY
-       ============================================================ -->
+  <!-- COMMUNITY VOICES -->
   <section class="py-16 md:py-24 bg-surface">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
         <div>
-          <img id="community-img"
-               src=""
-               alt="Healthcare professionals discussing public health strategies"
-               class="community-img shadow-xl"/>
+          <img id="community-img" src="" alt="Healthcare professionals discussing public health strategies" class="community-img shadow-xl"/>
         </div>
-
         <div>
           <div class="lg:col-span-4">
-          <h2 class="text-4xl font-extrabold text-primary mb-6">Share Your Story</h2>
-          <div class="w-20 h-1.5 bg-secondary rounded-full mb-20"></div>
-        </div>
-          <p class="text-lg text-on-surface-variant leading-relaxed mb-6">
-            Have you or someone you know faced challenges during a road accident or burn injury?
-          </p>
-          <p class="text-lg text-on-surface-variant leading-relaxed mb-10">
-            Your experience can help improve systems and save lives. We encourage individuals to share their real-life experiences to inform better policies, awareness, and interventions.
-          </p>
-          <a id="community-cta"
-             href="#" target="_blank" rel="noopener"
+            <h2 class="text-4xl font-extrabold text-primary mb-6">Share Your Story</h2>
+            <div class="w-20 h-1.5 bg-secondary rounded-full mb-20"></div>
+          </div>
+          <p class="text-lg text-on-surface-variant leading-relaxed mb-6">Have you or someone you know faced challenges during a road accident or burn injury?</p>
+          <p class="text-lg text-on-surface-variant leading-relaxed mb-10">Your experience can help improve systems and save lives. We encourage individuals to share their real-life experiences to inform better policies, awareness, and interventions.</p>
+          <a id="community-cta" href="#"
              class="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-container transition-all">
             Share Your Story
             <span class="material-symbols-outlined">arrow_forward</span>
@@ -762,59 +570,30 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       FOOTER HIGHLIGHT / JOIN US CTA
-       ============================================================ -->
+  <!-- JOIN US CTA -->
   <section class="bg-surface-container-low py-16 md:py-24 border-t border-outline-variant/10">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-
-      <h2 class="text-2xl md:text-3xl font-extrabold text-primary mb-4">
-        Join Us in Strengthening India's Trauma &amp; Health Systems
-      </h2>
-      <p class="text-on-surface-variant text-lg mb-10">
-        Together, we can build a safer, more responsive healthcare system.
-      </p>
-
-      <!-- CTA links -->
-     <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 mb-12">
-
-  <!-- Button 1 -->
-  <a id="cta-partner" href="#" target="_blank" rel="noopener"
-     class="w-full md:w-auto text-center bg-primary text-white px-6 py-3 rounded-lg font-semibold text-base md:bg-transparent md:text-primary md:p-0 md:hover:underline">
-    Partner With Us
-  </a>
-
-  <!-- Separator (ONLY DESKTOP) -->
-  <span class="hidden md:inline text-outline-variant">|</span>
-
-  <!-- Button 2 -->
-  <a id="cta-member" href="#" target="_blank" rel="noopener"
-     class="w-full md:w-auto text-center bg-primary text-white px-6 py-3 rounded-lg font-semibold text-base md:bg-transparent md:text-primary md:p-0 md:hover:underline">
-    Become a Member
-  </a>
-
-  <!-- Separator -->
-  <span class="hidden md:inline text-outline-variant">|</span>
-
-  <!-- Button 3 -->
-  <a id="cta-volunteer" href="#" target="_blank" rel="noopener"
-     class="w-full md:w-auto text-center bg-primary text-white px-6 py-3 rounded-lg font-semibold text-base md:bg-transparent md:text-primary md:p-0 md:hover:underline">
-    Volunteer With Us
-  </a>
-
-</div>
-
-      
-
-      <!-- Relevant image below separator -->
-      <div class="max-w-4xl mx-auto">
-        <img id="cta-section-img"
-             src=""
-             alt="Healthcare team collaborating for a stronger India"
-             class="cta-section-img shadow-xl"/>
+      <h2 class="text-2xl md:text-3xl font-extrabold text-primary mb-4">Join Us in Strengthening India's Trauma &amp; Health Systems</h2>
+      <p class="text-on-surface-variant text-lg mb-10">Together, we can build a safer, more responsive healthcare system.</p>
+      <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 mb-12">
+        <a id="cta-partner" href="#"
+           class="w-full md:w-auto text-center bg-primary text-white px-6 py-3 rounded-lg font-semibold text-base md:bg-transparent md:text-primary md:p-0 md:hover:underline cursor-pointer">
+          Partner With Us
+        </a>
+        <span class="hidden md:inline text-outline-variant">|</span>
+        <a id="cta-member" href="#"
+           class="w-full md:w-auto text-center bg-primary text-white px-6 py-3 rounded-lg font-semibold text-base md:bg-transparent md:text-primary md:p-0 md:hover:underline cursor-pointer">
+          Become a Member
+        </a>
+        <span class="hidden md:inline text-outline-variant">|</span>
+        <a id="cta-volunteer" href="#"
+           class="w-full md:w-auto text-center bg-primary text-white px-6 py-3 rounded-lg font-semibold text-base md:bg-transparent md:text-primary md:p-0 md:hover:underline cursor-pointer">
+          Volunteer With Us
+        </a>
       </div>
-
-<!-- Separator -->
+      <div class="max-w-4xl mx-auto">
+        <img id="cta-section-img" src="" alt="Healthcare team collaborating for a stronger India" class="cta-section-img shadow-xl"/>
+      </div>
       <div class="flex items-center gap-4 mt-12 max-w-3xl mx-auto">
         <div class="flex-1 h-px bg-outline-variant/50"></div>
         <span class="material-symbols-outlined text-outline-variant text-xl">favorite</span>
@@ -825,117 +604,70 @@
 
 </main>
 
-<!-- ============================================================
-     FOOTER
-     ============================================================ -->
+<!-- FOOTER -->
 <footer class="bg-[#f2f4f6] pt-0 pb-8 border-t border-outline-variant/10" id="contact">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
     <div class="space-y-6">
       <div class="text-xl font-bold text-[#00346f]">ITHCS Foundation</div>
       <p class="text-sm text-[#424751] leading-relaxed">Dedicated to building integrated, responsive, and patient-centric trauma and health care systems across India.</p>
-      <div class="text-xs font-semibold text-[#00346f]">Registered in Delhi, India</div>
+      <div class="text-xs font-semibold text-[#00346f]">Registered office: Delhi, India</div>
     </div>
-
     <div>
-      <h5 class="font-bold text-[#00346f] mb-6">Explore</h5>
-      <ul class="space-y-3">
+      <h5 class="font-bold text-[#00346f] md:mb-6 md:ml-24">Explore</h5>
+      <ul class="space-y-3 md:ml-24">
         <li><a class="text-sm text-[#424751] hover:text-[#b7102a] transition-all" href="#about">About Us</a></li>
         <li><a class="text-sm text-[#424751] hover:text-[#b7102a] transition-all" href="#focus-areas">Focus Areas</a></li>
         <li><a class="text-sm text-[#424751] hover:text-[#b7102a] transition-all" href="#advisory-board">Advisory Board</a></li>
         <li><a class="text-sm text-[#424751] hover:text-[#b7102a] transition-all" href="#get-involved">Get Involved</a></li>
       </ul>
     </div>
-
-    <div>
-      <h5 class="font-bold text-[#00346f] mb-6">Support</h5>
-      <ul class="space-y-3">
-        <li><a id="ft-volunteer"  class="text-sm text-[#424751] hover:text-[#b7102a] transition-all" href="#" target="_blank" rel="noopener">Volunteer Portal</a></li>
-        <li><a id="ft-member"     class="text-sm text-[#424751] hover:text-[#b7102a] transition-all" href="#" target="_blank" rel="noopener">Member Login</a></li>
-        <li><a id="ft-whatsapp"   class="text-sm text-[#424751] hover:text-[#b7102a] transition-all" href="#" target="_blank" rel="noopener">WhatsApp Support</a></li>
-      </ul>
-    </div>
-
     <div>
       <h5 class="font-bold text-[#00346f] mb-6">Legal</h5>
       <ul class="space-y-3">
         <li><a class="text-sm text-[#424751] hover:text-[#b7102a] transition-all" href="#">Privacy Policy</a></li>
         <li><a class="text-sm text-[#424751] hover:text-[#b7102a] transition-all" href="#">Terms of Service</a></li>
       </ul>
-        </ul>
     </div>
   </div>
-
-<div class="max-w-7xl mx-auto px-6 lg:px-8 pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between gap-4">
-
-  <p class="text-sm text-[#424751]">
-    © 2026 ITHCS Foundation. All rights reserved. Registered in Delhi, India
-  </p>
-
-  <div class="flex gap-6">
-    <a id="ft-mail-icon" href="#" target="_blank" rel="noopener">
-      <span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">mail</span>
-    </a>
-    <span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">share</span>
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between gap-4">
+    <p class="text-sm text-[#424751]">© 2026 ITHCS Foundation. All rights reserved. Registered in Delhi, India</p>
+    <div class="flex gap-6">
+      <a id="ft-mail-icon" href="#" target="_blank" rel="noopener">
+        <span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">mail</span>
+      </a>
+      <span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">share</span>
+    </div>
   </div>
-
-</div>
 </footer>
 
 <!-- ============================================================
-     BOOTSTRAP SCRIPT — wires SITE constants into the DOM
-     Run after page load; does not touch layout / styles.
+     BOOTSTRAP SCRIPT — images, video, menu, smooth scroll
      ============================================================ -->
 <script>
 (function () {
-  const wa  = SITE.whatsapp;
   const img = SITE.images;
 
-  /* ---- Header ---- */
-  document.getElementById('hdr-collaborate').href  = wa.collaborate;
+  /* ---- Hero video + images ---- */
+  document.getElementById('hero-video').src       = SITE.heroVideo;
+  document.getElementById('hero-card-img').src    = img.heroCard;
 
-  /* ---- Mobile snackbar ---- */
-  document.getElementById('mob-collaborate').href  = wa.collaborate;
-
-  /* ---- Hero ---- */
-  document.getElementById('hero-video').src        = SITE.heroVideo;
-  document.getElementById('hero-card-img').src     = img.heroCard;
-  document.getElementById('hero-collaborate').href = wa.collaborate;
-  document.getElementById('hero-volunteer').href   = wa.volunteer;
-  document.getElementById('hero-member').href      = wa.member;
-
-  /* ---- Advisory Board ---- */
-  document.getElementById('advisory-img').src      = img.advisory;
+  /* ---- Section images ---- */
+  document.getElementById('advisory-img').src     = img.advisory;
+  document.getElementById('challenge-img').src    = img.challenge;
+  document.getElementById('approach-img').src     = img.approach;
 
   /* ---- Get Involved images ---- */
-  document.getElementById('involve-ngos').src        = img.getInvolved.ngos;
-  document.getElementById('involve-medical').src     = img.getInvolved.medical;
-  document.getElementById('involve-public').src      = img.getInvolved.public;
-  document.getElementById('involve-individual').src  = img.getInvolved.individual;
+  document.getElementById('involve-ngos').src       = img.getInvolved.ngos;
+  document.getElementById('involve-medical').src    = img.getInvolved.medical;
+  document.getElementById('involve-public').src     = img.getInvolved.public;
+  document.getElementById('involve-individual').src = img.getInvolved.individual;
 
-  /* ---- Get Involved CTAs ---- */
-  document.getElementById('involve-ngos-cta').href    = wa.collaborate;
-  document.getElementById('involve-medical-cta').href = wa.collaborate;
-  document.getElementById('involve-public-cta').href  = wa.expert;
-  document.getElementById('involve-ind-member').href  = wa.member;
-  document.getElementById('involve-ind-volunteer').href = wa.volunteer;
-  document.getElementById('involve-ind-expert').href  = wa.expert;
+  /* ---- Other images ---- */
+  document.getElementById('community-img').src    = img.community;
+  document.getElementById('cta-section-img').src  = img.ctaSection;
 
-  /* ---- Community Voices ---- */
-  document.getElementById('community-img').src     = img.community;
-  document.getElementById('community-cta').href    = wa.story;
-
-  /* ---- CTA Section ---- */
-  document.getElementById('cta-partner').href      = wa.collaborate;
-  document.getElementById('cta-member').href       = wa.member;
-  document.getElementById('cta-volunteer').href    = wa.volunteer;
-  document.getElementById('cta-section-img').src   = img.ctaSection;
-
-  /* ---- Footer ---- */
-  document.getElementById('ft-volunteer').href     = wa.volunteer;
-  document.getElementById('ft-member').href        = wa.member;
-  document.getElementById('ft-whatsapp').href      = wa.base;
-  document.getElementById('ft-mail-icon').href     = wa.base;
+  /* ---- Footer mail ---- */
+  document.getElementById('ft-mail-icon').href    = SITE.whatsapp.base;
 
   /* ---- Mobile snackbar behaviour ---- */
   const hamburgerBtn   = document.getElementById('hamburger-btn');
@@ -969,7 +701,7 @@
   menuBackdrop.addEventListener('click', closeMenu);
   mobileNavLinks.forEach(l => l.addEventListener('click', closeMenu));
 
-  /* ---- Smooth scroll ---- */
+  /* ---- Smooth scroll (anchor links only) ---- */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const id = this.getAttribute('href');
@@ -982,11 +714,10 @@
     });
   });
 
-  /* ---- Focus area cards: centre-line highlight on every scroll frame (mobile only) ---- */
+  /* ---- Focus area cards highlight (mobile) ---- */
   if (window.matchMedia('(max-width: 1023px)').matches) {
     var focusCards = Array.prototype.slice.call(document.querySelectorAll('.focus-card'));
     var currentIdx = -1;
-
     function getCardIdxAtCentre() {
       var focusY = window.innerHeight * 0.5;
       for (var i = 0; i < focusCards.length; i++) {
@@ -995,26 +726,47 @@
       }
       return -1;
     }
-
     function setHighlight(idx) {
       if (idx === currentIdx) return;
       if (currentIdx >= 0) focusCards[currentIdx].classList.remove('in-view');
       currentIdx = idx;
       if (currentIdx >= 0) focusCards[currentIdx].classList.add('in-view');
     }
-
     var ticking = false;
     window.addEventListener('scroll', function () {
       if (ticking) return;
       ticking = true;
-      requestAnimationFrame(function () {
-        ticking = false;
-        setHighlight(getCardIdxAtCentre());
-      });
+      requestAnimationFrame(function () { ticking = false; setHighlight(getCardIdxAtCentre()); });
     }, { passive: true });
   }
 })();
 </script>
+
+<!-- ============================================================
+     FIREBASE — Analytics + App init (exact as required)
+     ============================================================ -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCqSAmA5np3imH45WVYCwyauWiy0tziqAY",
+    authDomain: "ithcs-foundation-website.firebaseapp.com",
+    projectId: "ithcs-foundation-website",
+    storageBucket: "ithcs-foundation-website.firebasestorage.app",
+    messagingSenderId: "110557119137",
+    appId: "1:110557119137:web:0795824e073cde4657e6e0",
+    measurementId: "G-7R2FDQBVDG"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+<!-- ============================================================
+     FORMS + BUTTON WIRING
+     ============================================================ -->
+<script type="module" src="main.js"></script>
 
 </body>
 </html>
